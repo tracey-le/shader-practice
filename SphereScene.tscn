@@ -1,0 +1,23 @@
+[gd_scene format=4 uid="uid://cpa8m7k0dec12"]
+
+[ext_resource type="Shader" uid="uid://cqg7n2ow3075o" path="res://Shader.gdshader" id="1_an6f1"]
+[ext_resource type="Script" uid="uid://ootl0lr7w6u6" path="res://shader_colors.gd" id="2_4sqa0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3bt6b"]
+render_priority = 0
+shader = ExtResource("1_an6f1")
+shader_parameter/colors = PackedVector4Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+[sub_resource type="SphereMesh" id="SphereMesh_65rt3"]
+material = SubResource("ShaderMaterial_3bt6b")
+
+[node name="Node3D" type="Node3D" unique_id=1727090955]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=299756045]
+transform = Transform3D(6.6755166, 0, 0, 0, 6.6755166, 0, 0, 0, 6.6755166, 0, 0, 0)
+mesh = SubResource("SphereMesh_65rt3")
+script = ExtResource("2_4sqa0")
+colors = PackedColorArray(0.7263969, 0.3564759, 0.8821138, 1, 0.9510978, 0.34757692, 0.74255353, 1, 0.90938365, 0.5221727, 0.3224084, 1)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1807858133]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.6743565)
