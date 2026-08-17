@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://cpa8m7k0dec12"]
+[gd_scene format=3 uid="uid://cpa8m7k0dec12"]
 
 [ext_resource type="Shader" uid="uid://cqg7n2ow3075o" path="res://Shader.gdshader" id="1_an6f1"]
 [ext_resource type="Script" uid="uid://ootl0lr7w6u6" path="res://shader_colors.gd" id="2_4sqa0"]
@@ -6,11 +6,6 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3bt6b"]
 render_priority = 0
 shader = ExtResource("1_an6f1")
-shader_parameter/colors = PackedVector4Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-shader_parameter/outline_width = 1.0
-shader_parameter/outline_softness = 1.0
-shader_parameter/outline_power = 1.0
-shader_parameter/outline_color = Vector4(1, 1, 1, 1)
 
 [sub_resource type="SphereMesh" id="SphereMesh_65rt3"]
 material = SubResource("ShaderMaterial_3bt6b")

@@ -4,8 +4,8 @@ const int num_colors = 3;
 uniform vec4 colors[num_colors];
 uniform float outline_width = 1;
 uniform float outline_softness = 1;
-uniform float outline_power = 0.1;
-uniform vec4 outline_color = vec4(1);
+uniform float outline_power = 1;
+uniform vec4 outline_base_color = vec4(1);
 
 void vertex() {
 	// Called for every vertex the material is visible on.
@@ -27,14 +27,16 @@ void fragment() {
 	float edge2 = edge1 + outline_softness;
 	float fresnel = pow(1.0 - clamp(dot(NORMAL, VIEW), 0, 1), outline_power);
 	float outline_intensity = mix(1.0, smoothstep(edge1, edge2, fresnel), step(0.0, edge1));
-	vec4 out_color = outline_intensity * outline_color;
+	vec4 outline_color = outline_intensity * outline_base_color;
+	vec3 out_color = outline_color.rgb + colors[index].rgb * (1.0 - outline_color.a);
+	
 	
 	// Called for every pixel the material is visible on.
 	//ALBEDO = vec3(0.9, 0.2, 0.4) * intensity;
 	//ALBEDO = colors[index].rgb; 
 	ALBEDO = out_color.rgb;
 	//ALPHA = colors[index].a;
-	ALPHA = out_color.a;
+	//ALPHA = out_color.a;
 	
 	
 }
