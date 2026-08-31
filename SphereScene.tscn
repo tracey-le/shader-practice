@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cpa8m7k0dec12"]
+[gd_scene format=4 uid="uid://cpa8m7k0dec12"]
 
 [ext_resource type="Shader" uid="uid://cqg7n2ow3075o" path="res://Shader.gdshader" id="1_an6f1"]
 [ext_resource type="Script" uid="uid://ootl0lr7w6u6" path="res://shader_colors.gd" id="2_4sqa0"]
@@ -6,6 +6,11 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3bt6b"]
 render_priority = 0
 shader = ExtResource("1_an6f1")
+shader_parameter/colors = PackedVector4Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+shader_parameter/outline_width = 1.0
+shader_parameter/outline_softness = 0.18
+shader_parameter/outline_power = 11.0
+shader_parameter/outline_base_color = Vector4(0.1, 0, 0.3, 1)
 
 [sub_resource type="SphereMesh" id="SphereMesh_65rt3"]
 material = SubResource("ShaderMaterial_3bt6b")
@@ -16,7 +21,7 @@ material = SubResource("ShaderMaterial_3bt6b")
 transform = Transform3D(6.6755166, 0, 0, 0, 6.6755166, 0, 0, 0, 6.6755166, 0, 0, 0)
 mesh = SubResource("SphereMesh_65rt3")
 script = ExtResource("2_4sqa0")
-colors = PackedColorArray(0.7263969, 0.3564759, 0.8821138, 1, 0.9510978, 0.34757692, 0.74255353, 1, 0.90938365, 0.5221727, 0.3224084, 1)
+colors = PackedColorArray(0.40852803, 0.07794183, 0.695511, 1, 0.7254902, 0.35686275, 0.88235295, 1, 0.9529412, 0.34901962, 0.7411765, 1, 0.9098039, 0.52156866, 0.32156864, 1)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1807858133]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.6743565)
