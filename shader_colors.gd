@@ -1,3 +1,5 @@
+@tool
+
 extends MeshInstance3D
 @export var colors: PackedColorArray
 
