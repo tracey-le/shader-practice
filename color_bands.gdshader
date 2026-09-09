@@ -7,6 +7,7 @@ uniform float outline_softness = 2;
 uniform float outline_power = 2;
 uniform vec4 outline_base_color = vec4(0.1, 0, 0.3, 1);
 
+
 void vertex() {
 	// Called for every vertex the material is visible on.
 }

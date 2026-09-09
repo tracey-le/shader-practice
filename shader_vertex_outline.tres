@@ -1,0 +1,23 @@
+[gd_resource type="ShaderMaterial" format=4 uid="uid://cicqlmw1sdwgx"]
+
+[ext_resource type="Shader" uid="uid://c82jfmjqtgj2m" path="res://vertex_extrusion_shader.gdshader" id="1_yx80o"]
+[ext_resource type="Shader" uid="uid://dw15wjynxyka8" path="res://color_bands.gdshader" id="2_w7j12"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wcxp3"]
+render_priority = 0
+shader = ExtResource("1_yx80o")
+shader_parameter/colors = PackedVector4Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+shader_parameter/outline_width = 0.015
+shader_parameter/outline_softness = 2.0
+shader_parameter/outline_power = 2.0
+shader_parameter/outline_base_color = Color(0.1, 0, 0.3, 1)
+
+[resource]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_wcxp3")
+shader = ExtResource("2_w7j12")
+shader_parameter/colors = PackedVector4Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+shader_parameter/outline_width = 1.0
+shader_parameter/outline_softness = 0.18
+shader_parameter/outline_power = 11.0
+shader_parameter/outline_base_color = Vector4(0.1, 0, 0.3, 1)
